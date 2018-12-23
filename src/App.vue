@@ -1,24 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <app-navbar class="mb-5"></app-navbar>
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <app-search></app-search>
+        </div>
+      </div>
+      <router-view></router-view>
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import appNavbar from "./components/Navbar";
+import appSearch from "./components/Search";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    appNavbar,
+    appSearch
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
